@@ -9,15 +9,17 @@ def solve(solver, inputFile):
 	resultado = subprocess.run(comando, capture_output=True, text=True)
 
 	# Obtiene la salida de stdout
-	salida = resultado.stdout
+	salida = resultado.stdout.split("\n")[-2].split(" ")
 
-	# Devuelve la última línea de la salida
-	valores = salida.split("\n")[-2].split(" ")[1:]
+	# Si es UNSAT, devuelve una lista vacía
+	if salida[1] == "UNSATISFIABLE":
+		return []
 
 	# Devuelve los valores como una lista de enteros
-	return list(map(int, valores))
+	valores = list(map(int, salida[1:]))
+	return valores
 
-def generarICS(info, solucion, outputFile):
+def getCalendar(info, solucion):
 	participantes = info['participantes']
 	dias = info['dias']
 	horas = info['horas']
@@ -58,9 +60,5 @@ def generarICS(info, solucion, outputFile):
 
 		# Agrega el evento al calendario
 		calendario.events.add(partido)
-
-	# Guarda el calendario en un archivo
-	with open(outputFile, 'w') as archivo:
-		archivo.writelines(calendario)
 
 	return calendario
