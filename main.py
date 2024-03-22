@@ -8,3 +8,6 @@ calendario = getCalendar(info, sol)
 
 for event in sorted(list(calendario.events), key=lambda x: x.begin):
 	print(f'{event.name}\t\t{event.begin.strftime("%d/%m")}\t\tdesde las {event.begin.strftime("%H")} hasta las {event.end.strftime("%H")}')
+
+with open("torneo.ics", "w") as f:
+	f.write(calendario.serialize())
