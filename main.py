@@ -10,8 +10,9 @@ if not sol:
 
 calendario = getCalendar(info, sol)
 
+print(f'{calendario.name}:')
 for event in sorted(list(calendario.events), key=lambda x: x.begin):
-	print(f'{event.name}\t{event.begin.strftime("%d/%m")}\t{event.begin.strftime("%H")}:00 - {event.end.strftime("%H")}:00')
+	print(f'{event.name}\t{event.begin.strftime("%d/%m/%y")}\t{event.begin.strftime("%H")}:00 - {event.end.strftime("%H")}:00')
 
 with open("torneo.ics", "w") as f:
 	f.write(calendario.serialize())

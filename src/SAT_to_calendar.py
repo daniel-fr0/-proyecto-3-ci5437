@@ -20,6 +20,7 @@ def solve(solver, inputFile):
 	return valores
 
 def getCalendar(info, solucion):
+	campeonato = info['campeonato']
 	participantes = info['participantes']
 	dias = info['dias']
 	horas = info['horas']
@@ -32,6 +33,7 @@ def getCalendar(info, solucion):
 	q = len(horas)
 
 	calendario = Calendar()
+	calendario.name = campeonato
 
 	# Itera sobre la solución
 	for idx in solucion:

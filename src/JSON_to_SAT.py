@@ -4,6 +4,7 @@ def getTournamentInfo(inputFile):
 	with open(inputFile) as f:
 		data = json.load(f)
 
+	campeonato = data['tournament_name']
 	participantes = data['participants']
 	
 	# calculo cuantos dias hay en el torneo a partir de la fecha de inicio y fin
@@ -25,6 +26,7 @@ def getTournamentInfo(inputFile):
 		horas.append(start_time + datetime.timedelta(hours=i*2))
 		
 	return {
+		'campeonato': campeonato,
 		'participantes': participantes,
 		'dias': dias,
 		'horas': horas
