@@ -34,6 +34,7 @@ def getCalendar(info, solucion):
 
 	calendario = Calendar()
 	calendario.name = campeonato
+	calendario.creator = f"{campeonato} - SAT to Calendar"
 
 	# Itera sobre la solución
 	for idx in solucion:
