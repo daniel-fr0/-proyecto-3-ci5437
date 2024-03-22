@@ -16,7 +16,7 @@ def solve(solver, inputFile):
 		return []
 
 	# Devuelve los valores como una lista de enteros
-	valores = list(map(int, salida[1:]))
+	valores = list(map(int, salida[1:-1]))
 	return valores
 
 def getCalendar(info, solucion):
