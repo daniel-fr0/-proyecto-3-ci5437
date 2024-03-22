@@ -102,18 +102,19 @@ def generateCNF(info, outputFile):
 	for k in range(p):
 		for l in range(q):
 			# no pueden haber dos partidos al mismo tiempo
-			for i in range(n):
-				for j in range(i+1,n):
-					for j2 in range(j+1,n):
-						# local
-						local = i * n * p * q + j * p * q + k * q + l + 1	# i-j-k-l
-						local2 = i * n * p * q + j2 * p * q + k * q + l + 1 # i-j2-k-l
-						clauses.append([-local, -local2, 0])	# i-j-k-l -> i-j2-k-l
-
-						# visitante
-						visit = j * n * p * q + i * p * q + k * q + l + 1   # j-i-k-l
-						visit2 = j2 * n * p * q + i * p * q + k * q + l + 1 # j2-i-k-l
-						clauses.append([-visit, -visit2, 0])	# j-i-k-l -> j2-i-k-l
+			for i1 in range(n):
+				for j1 in range(n):
+					if i1 == j1: continue  # un equipo no puede jugar contra sí mismo
+					for i2 in range(n):
+						for j2 in range(n):
+							if i2 == j2: continue  # un equipo no puede jugar contra sí mismo
+							if i1 == i2 and j1 == j2: continue  # el mismo partido no puede ser comparado consigo mismo
+							# partido 1
+							partido1 = i1 * n * p * q + j1 * p * q + k * q + l + 1
+							# partido 2
+							partido2 = i2 * n * p * q + j2 * p * q + k * q + l + 1
+							# no pueden haber dos partidos al mismo tiempo
+							clauses.append([-partido1, -partido2, 0])
 
 	# archivo con el CNF en formato DIMACS
 	with open(outputFile, 'w') as f:
