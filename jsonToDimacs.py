@@ -1,6 +1,6 @@
 import json, datetime
 
-def tournamentInfo(inputFile):
+def getTournamentInfo(inputFile):
 	with open(inputFile) as f:
 		data = json.load(f)
 
@@ -30,7 +30,7 @@ def tournamentInfo(inputFile):
 		'horas': horas
 	}
 
-def generateDimacs(info, outputFile):
+def generateCNF(info, outputFile):
 	participantes = info['participantes']
 	dias = info['dias']
 	horas = info['horas']
@@ -114,3 +114,9 @@ def generateDimacs(info, outputFile):
 						visit = j * n * p * q + i * p * q + k * q + l + 1   # j-i-k-l
 						visit2 = j2 * n * p * q + i * p * q + k * q + l + 1 # j2-i-k-l
 						clauses.append([-visit, -visit2, 0])	# j-i-k-l -> j2-i-k-l
+
+	# archivo con el CNF en formato DIMACS
+	with open(outputFile, 'w') as f:
+		f.write(f'p cnf {N} {len(clauses)}\n')
+		for clause in clauses:
+			f.write(' '.join(map(str, clause)) + '\n')
