@@ -1,5 +1,3 @@
-*.dimacs
-*.json
 *.ics
 venv/
 __pycache__/
