@@ -101,6 +101,19 @@ def generateCNF(info, outputFile):
 			clauses.append(posible_local + [0])
 			clauses.append(posible_visit + [0])
 
+	# un equipo no puede tener dos partidos el mismo dia
+	for i in range(n):
+		for k in range(p):
+			for l in range(q):
+				for l2 in range(l+1,q):
+					for j in range(n):
+						for j2 in range(n):
+							if i == j or i == j2: continue
+							if j == j2: continue
+							partido1 = i * n * p * q + j * p * q + k * q + l + 1
+							partido2 = i * n * p * q + j2 * p * q + k * q + l2 + 1
+							clauses.append([-partido1, -partido2, 0])
+
 	for k in range(p):
 		for l in range(q):
 			# no pueden haber dos partidos al mismo tiempo
