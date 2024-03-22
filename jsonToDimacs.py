@@ -23,10 +23,6 @@ def tournamentInfo(inputFile):
 	horas = []
 	for i in range(partidos):
 		horas.append(start_time + datetime.timedelta(hours=i*2))
-
-	# print(f'{len(participantes)} participantes: {", ".join(participantes)}')
-	# print(f'{len(dias)} dias: {", ".join([str(dia.date()) for dia in dias])}')
-	# print(f'{len(horas)} partidos por dia a las horas: {", ".join([str(hora.time()) for hora in horas])}')
 		
 	return {
 		'participantes': participantes,
@@ -118,10 +114,3 @@ def generateDimacs(info, outputFile):
 						visit = j * n * p * q + i * p * q + k * q + l + 1   # j-i-k-l
 						visit2 = j2 * n * p * q + i * p * q + k * q + l + 1 # j2-i-k-l
 						clauses.append([-visit, -visit2, 0])	# j-i-k-l -> j2-i-k-l
-
-
-
-
-
-
-tournamentInfo("torneo.json")

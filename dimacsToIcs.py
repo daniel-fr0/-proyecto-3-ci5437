@@ -59,9 +59,8 @@ def generarICS(info, solucion, outputFile):
 		# Agrega el evento al calendario
 		calendario.events.add(partido)
 
-	for event in sorted(list(calendario.events), key=lambda x: x.begin):
-		print(f'{event.name}\t\t{event.begin.strftime("%d/%m")}\t\tdesde las {event.begin.strftime("%H")} hasta las {event.end.strftime("%H")}')
-
 	# Guarda el calendario en un archivo
 	with open(outputFile, 'w') as archivo:
 		archivo.writelines(calendario)
+
+	return calendario
