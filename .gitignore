@@ -1,6 +1,5 @@
 *.ics
 venv/
 __pycache__/
-*.json
 *.ics
 *.cnf
