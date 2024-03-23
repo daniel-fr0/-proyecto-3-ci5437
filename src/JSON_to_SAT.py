@@ -1,4 +1,6 @@
 import json, datetime
+import numpy as np
+from itertools import product
 
 def getTournamentInfo(inputFile):
 	with open(inputFile) as f:
@@ -52,6 +54,14 @@ def generateCNF(info, outputFile):
 	p = len(dias)
 	q = len(horas)
 
+	class Match:
+		def __init__(self, local, visit, dia, hora):
+			self.i = local
+			self.j = visit
+			self.dia = dia
+			self.hora = hora
+			self.idx = local * (n * p * q) + visit * (p * q) + dia * q + hora + 1
+
 	# cantidad de variables
 	N = n * (n-1) * p * q
 
@@ -63,85 +73,71 @@ def generateCNF(info, outputFile):
 	# 5. Un participante no puede jugar dos veces seguidas como local o visitante
 	clauses = []
 
-	for i in range(n):
-		for j in range(i+1,n):
-			# existe por lo menos un partido entre cada par de participantes
-			posible_local = []
-			posible_visit = []	
 
-			for k in range(p):
-				for l in range(q):
-					# para un i y j dados, se propone un partido local y uno visitante
-					local = i * n * p * q + j * p * q + k * q + l + 1	# i-j-k-l
-					visit = j * n * p * q + i * p * q + k * q + l + 1   # j-i-k-l
+	# 1. Todos los participantes deben jugar con todos los demas 2 veces (ida y vuelta)
+	# 2. Un participante no puede jugar consigo mismo
+	for i, j in product(range(n), range(n)):
+		if i == j: continue
+		local = [Match(i, j, d, h) for d, h in product(range(p), range(q))]
+		visit = [Match(j, i, d, h) for d, h in product(range(p), range(q))]
 
-					# para un i y j dados, tiene que haber un partido local y uno visitante
-					posible_local.append(local)
-					posible_visit.append(visit)
+		clauses.append([m.idx for m in local] + [0])
+		clauses.append([m.idx for m in visit] + [0])
 
-					# pero no pueden ser al mismo tiempo, alguno debe ser false
-					clauses.append([-local, -visit, 0])
+		# solo un juego i vs j
+		for m1, m2 in product(local, local):
+			if m1.dia != m2.dia or m1.hora != m2.hora:
+				clauses.append([-m1.idx, -m2.idx, 0])
 
-					# el dia siguiente no pueden jugar de nuevo como local o visitante
-					if k < p-1:
-						# local
-						clauses.append([-local, -(local + q), 0])	# i-j-k-l -> i-j-k+1-l
-						# visitante
-						clauses.append([-visit, -(visit + q), 0])	# j-i-k-l -> j-i-k+1-l
+		for m1, m2 in product(visit, visit):
+			if m1.dia != m2.dia or m1.hora != m2.hora:
+				clauses.append([-m1.idx, -m2.idx, 0])
 
-					for l2 in range(l+1,q):
-						# no se puede repetir a otra hora el mismo dia
-						local2 = i * n * p * q + j * p * q + k * q + l2 + 1	# i-j-k-l2
-						visit2 = j * n * p * q + i * p * q + k * q + l2 + 1	# j-i-k-l2
+	# 3. Dos juegos no pueden ocurrir al mismo tiempo
+	for d, h in product(range(p), range(q)):
+		horarios = [Match(i, j, d, h) for i, j in product(range(n), range(n)) if i != j]
 
-						clauses.append([-local, -local2, 0])	# i-j-k-l -> i-j-k-l2
-						clauses.append([-visit, -visit2, 0])	# j-i-k-l -> j-i-k-l2
+		for m1, m2 in product(horarios, horarios):
+			if m1.i != m2.i or m1.j != m2.j:
+				clauses.append([-m1.idx, -m2.idx, 0])
 
-					for k2 in range(k+1,p):
-						for l2 in range(q):
-							# no se puede repetir en otro dia a cualquier hora
-							local2 = i * n * p * q + j * p * q + k2 * q + l2 + 1	# i-j-k2-l2
-							visit2 = j * n * p * q + i * p * q + k2 * q + l2 + 1	# j-i-k2-l2
+	# 4. Un participante no puede jugar dos veces en un mismo dia
+	for i, d in product(range(n), range(p)):
+		partidosLocal = [Match(i, j, d, h) for j, h in product(range(n), range(q)) if i != j]
+		partidosVisit = [Match(j, i, d, h) for j, h in product(range(n), range(q)) if i != j]
 
-							clauses.append([-local, -local2, 0])	# i-j-k-l -> i-j-k2-l2
-							clauses.append([-visit, -visit2, 0])	# j-i-k-l -> j-i-k2-l2
+		for m1, m2 in product(partidosLocal, partidosLocal):
+			if m1.j != m2.j or m1.hora != m2.hora:
+				clauses.append([-m1.idx, -m2.idx, 0])
 
-			# al menos un partido como local y uno como visitante
-			clauses.append(posible_local + [0])
-			clauses.append(posible_visit + [0])
+		for m1, m2 in product(partidosVisit, partidosVisit):
+			if m1.i != m2.i or m1.hora != m2.hora:
+				clauses.append([-m1.idx, -m2.idx, 0])
 
-	# un equipo no puede tener dos partidos el mismo dia
-	for i in range(n):
-		for k in range(p):
-			for l in range(q):
-				for l2 in range(l+1,q):
-					for j in range(n):
-						for j2 in range(n):
-							if i == j or i == j2: continue
-							if j == j2: continue
-							partido1 = i * n * p * q + j * p * q + k * q + l + 1
-							partido2 = i * n * p * q + j2 * p * q + k * q + l2 + 1
-							clauses.append([-partido1, -partido2, 0])
+		for m1, m2 in product(partidosLocal, partidosVisit):
+			if m1.hora != m2.hora:
+				clauses.append([-m1.idx, -m2.idx, 0])
 
-	for k in range(p):
-		for l in range(q):
-			# no pueden haber dos partidos al mismo tiempo
-			for i1 in range(n):
-				for j1 in range(n):
-					if i1 == j1: continue  # un equipo no puede jugar contra sí mismo
-					for i2 in range(n):
-						for j2 in range(n):
-							if i2 == j2: continue  # un equipo no puede jugar contra sí mismo
-							if i1 == i2 and j1 == j2: continue  # el mismo partido no puede ser comparado consigo mismo
-							# partido 1
-							partido1 = i1 * n * p * q + j1 * p * q + k * q + l + 1
-							# partido 2
-							partido2 = i2 * n * p * q + j2 * p * q + k * q + l + 1
-							# no pueden haber dos partidos al mismo tiempo
-							clauses.append([-partido1, -partido2, 0])
+	
+	# 5. Un participante no puede jugar dos dias seguidos como local o visitante
+	for i, d in product(range(n), range(p-1)):
+		partidosLocal = [Match(i, j, d, h) for j, h in product(range(n), range(q)) if i != j]
+		partidosVisit = [Match(j, i, d, h) for j, h in product(range(n), range(q)) if i != j]
+
+		partidosLocalNext = [Match(i, j, d+1, h) for j, h in product(range(n), range(q)) if i != j]
+		partidosVisitNext = [Match(j, i, d+1, h) for j, h in product(range(n), range(q)) if i != j]
+
+		for m1, m2 in product(partidosLocal, partidosLocalNext):
+			clauses.append([-m1.idx, -m2.idx, 0])
+
+		for m1, m2 in product(partidosVisit, partidosVisitNext):
+			clauses.append([-m1.idx, -m2.idx, 0])
 
 	# archivo con el CNF en formato DIMACS
 	with open(outputFile, 'w') as f:
 		f.write(f'p cnf {N} {len(clauses)}\n')
 		for clause in clauses:
 			f.write(' '.join(map(str, clause)) + '\n')
+
+	# retorna la cantidad de variables y restricciones
+	return N, len(clauses)
