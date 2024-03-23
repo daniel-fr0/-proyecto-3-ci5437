@@ -17,4 +17,8 @@ Una vez con las variables y las clausulas definidas, se procede a escribir el ar
 Una vez con el problema en formato DIMACS CNF, se procede a resolverlo con el SAT solver Glucose. Para ello se crea un programa en Python que se encarga de llamar a Glucose y obtener la asignacion de las variables. Las variables con valores positivos representan una asignacion verdadera, por lo que estos representan los juegos que se van a realizar.
 
 Se traduce la asignacion de las variables a un archivo con extension `.ics` en formato de iCalendar. Para ello se crea un objeto `Calendar` de la libreria `icalendar` y se agregan los eventos correspondientes a la asignacion de los juegos.
+
 Los eventos tienen su hora asignada, la fecha del juego, el participante local y el participante visitante. El nombre que reciben es `{local} vs {visitante}`, la hora de inicio es la hora asignada y la de fin es la hora asignada mas 2 horas.
+
+# Actividad 3
+El cliente implementado en `main.py` recibe un JSON con el formato de entrada, ejecuta el programa que lo transforma en CNF, se guarda en un archivo con el mismo nombre pero extension `.cnf` en el directorio `CNF`. Luego el programa resuelve el problema con Glucose y se asegura de que se cree el archivo con el mismo nombre y extension `.ics` con la respuesta, o falle en caso de ser UNSAT.

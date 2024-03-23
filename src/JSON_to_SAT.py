@@ -19,6 +19,15 @@ def getTournamentInfo(inputFile):
 	# calculo cuantos partidos se pueden jugar en un dia, los partidos duran 2 horas
 	start_time = datetime.datetime.strptime(data['start_time'], '%H:%M:%S')
 	end_time = datetime.datetime.strptime(data['end_time'], '%H:%M:%S')
+
+	# las horas deben ser en punto
+	if start_time.minute != 0 or start_time.second != 0:
+		start_time = start_time.replace(minute=0, second=0)
+		start_time += datetime.timedelta(hours=1)
+
+	if end_time.minute != 0 or end_time.second != 0:
+		end_time = end_time.replace(minute=0, second=0)
+
 	partidos = (end_time - start_time).seconds // 3600 // 2
 
 	horas = []
