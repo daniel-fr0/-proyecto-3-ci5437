@@ -6,19 +6,23 @@ if len(argv) < 2:
 	print("Uso: python main.py <torneo.json> [solver]")
 	exit()
 
-print("Generando archivo CNF...")
 
 # Transformar el JSON a CNF
 basename = argv[1].split(".")[0]
 basename = basename.split("/")[-1]
 info = getTournamentInfo(argv[1])
-variables, clausulas = generateCNF(info, f"{basename}.cnf")
-
-print(f"Se generó el archivo {basename}.cnf")
 
 print(f"{len(info['participantes'])} participantes")
 print(f"{len(info['dias'])} días")
 print(f"{len(info['horas'])} horas")
+
+print("Generando archivo CNF...")
+
+variables, clausulas = generateCNF(info, f"{basename}.cnf")
+
+print(f"Se generó el archivo {basename}.cnf")
+
+
 
 print(f"Resolviendo SAT de {variables} variables y {clausulas} cláusulas...")
 
