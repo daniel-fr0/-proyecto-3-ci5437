@@ -3,7 +3,7 @@ from ics import Calendar, Event
 
 def solve(solver, inputFile):
 	# Comando a ejecutar - reemplaza esto con el comando real
-	comando = [f"./{solver}", inputFile]
+	comando = [f"./{solver}", f"CNF/{inputFile}"]
 
 	# Ejecuta el comando y captura su salida
 	resultado = subprocess.run(comando, capture_output=True, text=True)
@@ -14,6 +14,9 @@ def solve(solver, inputFile):
 	# Si es UNSAT, devuelve una lista vacía
 	if salida[1] == "UNSATISFIABLE":
 		return []
+	
+	if salida[0] == "ERROR!":
+		raise Exception(" ".join(salida))
 
 	# Devuelve los valores como una lista de enteros
 	valores = list(map(int, salida[1:-1]))

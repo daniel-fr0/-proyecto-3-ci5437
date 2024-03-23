@@ -22,3 +22,17 @@ Los eventos tienen su hora asignada, la fecha del juego, el participante local y
 
 # Actividad 3
 El cliente implementado en `main.py` recibe un JSON con el formato de entrada, ejecuta el programa que lo transforma en CNF, se guarda en un archivo con el mismo nombre pero extension `.cnf` en el directorio `CNF`. Luego el programa resuelve el problema con Glucose y se asegura de que se cree el archivo con el mismo nombre y extension `.ics` con la respuesta, o falle en caso de ser UNSAT.
+
+## Modo de uso
+Para instalar las dependencias, se debe correr el siguiente comando:
+```bash
+pip install -r requirements.txt
+```
+
+Para ejecutar el programa, se debe correr el siguiente comando:
+```bash
+python main.py <archivo_entrada>.json [solver]
+```
+Se puede especificar el solver a utilizar, por defecto se utiliza Glucose. Para utilizar glucose-syrup se debe especificar `solver` como `syrup`.
+
+El archivo `.cnf` se guardara en el directorio `CNF` y el archivo `.ics` se guardara en el directorio `ICS`.

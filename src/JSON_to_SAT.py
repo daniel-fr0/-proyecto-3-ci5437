@@ -134,7 +134,7 @@ def generateCNF(info, outputFile):
 			clauses.append([-m1.idx, -m2.idx, 0])
 
 	# archivo con el CNF en formato DIMACS
-	with open(outputFile, 'w') as f:
+	with open(f"CNF/{outputFile}", 'w') as f:
 		f.write(f'p cnf {N} {len(clauses)}\n')
 		for clause in clauses:
 			f.write(' '.join(map(str, clause)) + '\n')

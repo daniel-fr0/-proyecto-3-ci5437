@@ -47,7 +47,7 @@ for event in sorted(list(calendario.events), key=lambda x: x.begin):
 	print(f'\t{event.name}\t\t\t{event.begin.strftime("%d/%m/%y")}\t{event.begin.strftime("%H")}:00 - {event.end.strftime("%H")}:00')
 print()
 
-with open(f"resultados/{basename}.ics", "w") as f:
+with open(f"ICS/{basename}.ics", "w") as f:
 	f.write(calendario.serialize())
 
 print(f"Se generó el archivo {basename}.ics con el calendario del torneo '{calendario.name}'")
