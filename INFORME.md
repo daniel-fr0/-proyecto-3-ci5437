@@ -23,6 +23,10 @@ Los eventos tienen su hora asignada, la fecha del juego, el participante local y
 # Actividad 3
 El cliente implementado en `main.py` recibe un JSON con el formato de entrada, ejecuta el programa que lo transforma en CNF, se guarda en un archivo con el mismo nombre pero extension `.cnf` en el directorio `CNF`. Luego el programa resuelve el problema con Glucose y se asegura de que se cree el archivo con el mismo nombre y extension `.ics` con la respuesta, o falle en caso de ser UNSAT.
 
+Se incluyen archivos de prueba en el directorio `casosDePrueba` con los cuales se puede probar el programa.
+
+Los resultados de los casos de prueba se pueden encontrar en `resultados`.
+
 ## Modo de uso
 Para instalar las dependencias, se debe correr el siguiente comando:
 ```bash

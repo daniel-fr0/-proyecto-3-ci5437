@@ -1,0 +1,43 @@
+Generando archivo CNF...
+Se generó el archivo 5teams.cnf
+5 participantes
+10 días
+4 horas
+Resolviendo SAT de 800 variables y 134280 cláusulas...
+SATISFACIBLE
+Generando calendario...
+
+################################################################################
+
+	Campeonato Mundial de League of Legends
+
+################################################################################
+
+	Juego(local vs visitante)	Fecha		Hora
+
+	FNC vs RNG			04/03/24	13:00 - 15:00
+	SKT vs G2			04/03/24	15:00 - 17:00
+	RNG vs FNC			05/03/24	13:00 - 15:00
+	G2 vs TSM			05/03/24	19:00 - 21:00
+	FNC vs G2			06/03/24	13:00 - 15:00
+	TSM vs SKT			06/03/24	19:00 - 21:00
+	G2 vs FNC			07/03/24	13:00 - 15:00
+	SKT vs TSM			07/03/24	19:00 - 21:00
+	FNC vs SKT			08/03/24	13:00 - 15:00
+	RNG vs G2			08/03/24	15:00 - 17:00
+	TSM vs FNC			09/03/24	15:00 - 17:00
+	G2 vs RNG			09/03/24	19:00 - 21:00
+	FNC vs TSM			10/03/24	13:00 - 15:00
+	RNG vs SKT			10/03/24	15:00 - 17:00
+	SKT vs FNC			11/03/24	13:00 - 15:00
+	TSM vs RNG			11/03/24	15:00 - 17:00
+	RNG vs TSM			12/03/24	13:00 - 15:00
+	G2 vs SKT			12/03/24	17:00 - 19:00
+	TSM vs G2			13/03/24	13:00 - 15:00
+	SKT vs RNG			13/03/24	15:00 - 17:00
+
+Se generó el archivo 5teams.ics con el calendario del torneo 'Campeonato Mundial de League of Legends'
+
+real	0m0.264s
+user	0m0.390s
+sys	0m0.428s

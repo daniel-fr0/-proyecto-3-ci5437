@@ -1,0 +1,14 @@
+# { time python3 main.py casosDePrueba/4teamsUNSAT.json; } &> resultados/4teamsUNSAT.txt &&
+# { time python3 main.py casosDePrueba/4teams.json; } &> resultados/4teams.txt &&
+# { time python3 main.py casosDePrueba/5teamsUNSAT.json; } &> resultados/5teamsUNSAT.txt &&
+# { time python3 main.py casosDePrueba/5teams.json; } &> resultados/5teams.txt &&
+# { time python3 main.py casosDePrueba/6teamsUNSAT.json; } &> resultados/6teamsUNSAT.txt &&
+# { time python3 main.py casosDePrueba/6teams.json; } &> resultados/6teams.txt &&
+# { time python3 main.py casosDePrueba/7teamsUNSAT.json; } &> resultados/7teamsUNSAT.txt &&
+# { time python3 main.py casosDePrueba/7teams.json; } &> resultados/7teams.txt &&
+# { time python3 main.py casosDePrueba/8teamsUNSAT.json; } &> resultados/8teamsUNSAT.txt &&
+# { time python3 main.py casosDePrueba/8teams.json; } &> resultados/8teams.txt &&
+# { time python3 main.py casosDePrueba/9teamsUNSAT.json; } &> resultados/9teamsUNSAT.txt &&
+# { time python3 main.py casosDePrueba/9teams.json; } &> resultados/9teams.txt &&
+# { time python3 main.py casosDePrueba/10teamsUNSAT.json; } &> resultados/10teamsUNSAT.txt &&
+{ time python3 main.py casosDePrueba/10teams.json; } &> resultados/10teams.txt 

@@ -1,0 +1,95 @@
+Generando archivo CNF...
+Se generó el archivo 9teams.cnf
+9 participantes
+20 días
+4 horas
+Resolviendo SAT de 5760 variables y 2164752 cláusulas...
+SATISFACIBLE
+Generando calendario...
+
+################################################################################
+
+	Campeonato Mundial de League of Legends
+
+################################################################################
+
+	Juego(local vs visitante)	Fecha		Hora
+
+	WBG vs G2			04/03/24	13:00 - 15:00
+	IG vs TSM			04/03/24	15:00 - 17:00
+	FNC vs RNG			04/03/24	17:00 - 19:00
+	SKT vs C9			04/03/24	19:00 - 21:00
+	C9 vs SKT			05/03/24	13:00 - 15:00
+	G2 vs FNC			05/03/24	15:00 - 17:00
+	TSM vs IG			05/03/24	17:00 - 19:00
+	TL vs WBG			05/03/24	19:00 - 21:00
+	WBG vs C9			06/03/24	13:00 - 15:00
+	IG vs G2			06/03/24	15:00 - 17:00
+	FNC vs TSM			06/03/24	17:00 - 19:00
+	RNG vs TL			06/03/24	19:00 - 21:00
+	TL vs FNC			07/03/24	15:00 - 17:00
+	SKT vs IG			07/03/24	17:00 - 19:00
+	TSM vs RNG			07/03/24	19:00 - 21:00
+	C9 vs WBG			08/03/24	13:00 - 15:00
+	FNC vs TL			08/03/24	15:00 - 17:00
+	G2 vs SKT			08/03/24	17:00 - 19:00
+	RNG vs TSM			08/03/24	19:00 - 21:00
+	TL vs IG			09/03/24	13:00 - 15:00
+	WBG vs RNG			09/03/24	17:00 - 19:00
+	SKT vs G2			09/03/24	19:00 - 21:00
+	TSM vs WBG			10/03/24	13:00 - 15:00
+	IG vs C9			10/03/24	15:00 - 17:00
+	FNC vs SKT			10/03/24	17:00 - 19:00
+	C9 vs IG			11/03/24	13:00 - 15:00
+	RNG vs FNC			11/03/24	15:00 - 17:00
+	G2 vs TSM			11/03/24	17:00 - 19:00
+	WBG vs TL			11/03/24	19:00 - 21:00
+	TL vs SKT			12/03/24	13:00 - 15:00
+	IG vs RNG			12/03/24	17:00 - 19:00
+	FNC vs C9			12/03/24	19:00 - 21:00
+	RNG vs G2			13/03/24	15:00 - 17:00
+	C9 vs TL			13/03/24	17:00 - 19:00
+	WBG vs TSM			13/03/24	19:00 - 21:00
+	TL vs RNG			14/03/24	13:00 - 15:00
+	TSM vs SKT			14/03/24	15:00 - 17:00
+	G2 vs WBG			14/03/24	17:00 - 19:00
+	IG vs FNC			14/03/24	19:00 - 21:00
+	FNC vs IG			15/03/24	15:00 - 17:00
+	SKT vs TL			15/03/24	17:00 - 19:00
+	C9 vs TSM			15/03/24	19:00 - 21:00
+	RNG vs WBG			16/03/24	13:00 - 15:00
+	IG vs SKT			16/03/24	15:00 - 17:00
+	TL vs G2			16/03/24	17:00 - 19:00
+	TSM vs C9			16/03/24	19:00 - 21:00
+	SKT vs TSM			17/03/24	13:00 - 15:00
+	C9 vs RNG			17/03/24	15:00 - 17:00
+	WBG vs FNC			17/03/24	17:00 - 19:00
+	G2 vs IG			17/03/24	19:00 - 21:00
+	RNG vs SKT			18/03/24	13:00 - 15:00
+	FNC vs WBG			18/03/24	15:00 - 17:00
+	TL vs C9			18/03/24	17:00 - 19:00
+	TSM vs G2			18/03/24	19:00 - 21:00
+	SKT vs RNG			19/03/24	13:00 - 15:00
+	WBG vs IG			19/03/24	15:00 - 17:00
+	C9 vs FNC			19/03/24	17:00 - 19:00
+	G2 vs TL			19/03/24	19:00 - 21:00
+	RNG vs C9			20/03/24	13:00 - 15:00
+	FNC vs G2			20/03/24	15:00 - 17:00
+	TL vs TSM			20/03/24	17:00 - 19:00
+	TSM vs TL			21/03/24	13:00 - 15:00
+	G2 vs RNG			21/03/24	15:00 - 17:00
+	SKT vs FNC			21/03/24	17:00 - 19:00
+	IG vs WBG			21/03/24	19:00 - 21:00
+	WBG vs SKT			22/03/24	13:00 - 15:00
+	RNG vs IG			22/03/24	17:00 - 19:00
+	C9 vs G2			22/03/24	19:00 - 21:00
+	TSM vs FNC			23/03/24	13:00 - 15:00
+	SKT vs WBG			23/03/24	15:00 - 17:00
+	G2 vs C9			23/03/24	17:00 - 19:00
+	IG vs TL			23/03/24	19:00 - 21:00
+
+Se generó el archivo 9teams.ics con el calendario del torneo 'Campeonato Mundial de League of Legends'
+
+real	0m3.583s
+user	0m3.559s
+sys	0m0.572s

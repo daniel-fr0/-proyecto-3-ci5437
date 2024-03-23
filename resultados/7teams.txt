@@ -1,0 +1,65 @@
+Generando archivo CNF...
+Se generó el archivo 7teams.cnf
+7 participantes
+14 días
+4 horas
+Resolviendo SAT de 2352 variables y 610596 cláusulas...
+SATISFACIBLE
+Generando calendario...
+
+################################################################################
+
+	Campeonato Mundial de League of Legends
+
+################################################################################
+
+	Juego(local vs visitante)	Fecha		Hora
+
+	TSM vs FNC			04/03/24	13:00 - 15:00
+	RNG vs SKT			04/03/24	15:00 - 17:00
+	G2 vs EDG			04/03/24	19:00 - 21:00
+	DWG vs G2			05/03/24	13:00 - 15:00
+	SKT vs RNG			05/03/24	17:00 - 19:00
+	EDG vs TSM			05/03/24	19:00 - 21:00
+	TSM vs DWG			06/03/24	15:00 - 17:00
+	G2 vs SKT			06/03/24	17:00 - 19:00
+	FNC vs EDG			06/03/24	19:00 - 21:00
+	DWG vs FNC			07/03/24	15:00 - 17:00
+	RNG vs TSM			07/03/24	17:00 - 19:00
+	SKT vs G2			07/03/24	19:00 - 21:00
+	FNC vs RNG			08/03/24	15:00 - 17:00
+	TSM vs SKT			08/03/24	17:00 - 19:00
+	EDG vs DWG			08/03/24	19:00 - 21:00
+	SKT vs TSM			09/03/24	13:00 - 15:00
+	G2 vs FNC			09/03/24	15:00 - 17:00
+	DWG vs EDG			09/03/24	17:00 - 19:00
+	FNC vs SKT			10/03/24	13:00 - 15:00
+	TSM vs G2			10/03/24	15:00 - 17:00
+	RNG vs DWG			10/03/24	19:00 - 21:00
+	EDG vs FNC			11/03/24	15:00 - 17:00
+	DWG vs TSM			11/03/24	17:00 - 19:00
+	G2 vs RNG			11/03/24	19:00 - 21:00
+	TSM vs EDG			12/03/24	15:00 - 17:00
+	SKT vs DWG			12/03/24	17:00 - 19:00
+	RNG vs G2			12/03/24	19:00 - 21:00
+	EDG vs RNG			13/03/24	15:00 - 17:00
+	FNC vs TSM			13/03/24	17:00 - 19:00
+	DWG vs SKT			13/03/24	19:00 - 21:00
+	G2 vs DWG			14/03/24	13:00 - 15:00
+	SKT vs FNC			14/03/24	15:00 - 17:00
+	RNG vs EDG			14/03/24	19:00 - 21:00
+	EDG vs SKT			15/03/24	13:00 - 15:00
+	FNC vs G2			15/03/24	15:00 - 17:00
+	DWG vs RNG			15/03/24	17:00 - 19:00
+	G2 vs TSM			16/03/24	13:00 - 15:00
+	RNG vs FNC			16/03/24	15:00 - 17:00
+	SKT vs EDG			16/03/24	17:00 - 19:00
+	EDG vs G2			17/03/24	13:00 - 15:00
+	TSM vs RNG			17/03/24	17:00 - 19:00
+	FNC vs DWG			17/03/24	19:00 - 21:00
+
+Se generó el archivo 7teams.ics con el calendario del torneo 'Campeonato Mundial de League of Legends'
+
+real	0m12.897s
+user	0m12.942s
+sys	0m0.502s

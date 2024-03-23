@@ -1,0 +1,12 @@
+Generando archivo CNF...
+Se generó el archivo 4teamsUNSAT.cnf
+4 participantes
+5 días
+2 horas
+Resolviendo SAT de 120 variables y 6216 cláusulas...
+UNSATISFACIBLE
+No hay solución
+
+real	0m0.126s
+user	0m0.267s
+sys	0m0.410s

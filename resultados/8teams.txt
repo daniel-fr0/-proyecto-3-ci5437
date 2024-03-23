@@ -1,0 +1,79 @@
+Generando archivo CNF...
+Se generó el archivo 8teams.cnf
+8 participantes
+16 días
+4 horas
+Resolviendo SAT de 3584 variables y 1105776 cláusulas...
+SATISFACIBLE
+Generando calendario...
+
+################################################################################
+
+	Campeonato Mundial de League of Legends
+
+################################################################################
+
+	Juego(local vs visitante)	Fecha		Hora
+
+	FPX vs SKT			04/03/24	13:00 - 15:00
+	EDG vs G2			04/03/24	15:00 - 17:00
+	FNC vs TSM			04/03/24	17:00 - 19:00
+	RNG vs DWG			04/03/24	19:00 - 21:00
+	G2 vs EDG			05/03/24	13:00 - 15:00
+	DWG vs RNG			05/03/24	15:00 - 17:00
+	SKT vs FNC			05/03/24	17:00 - 19:00
+	TSM vs FPX			05/03/24	19:00 - 21:00
+	EDG vs DWG			06/03/24	13:00 - 15:00
+	RNG vs TSM			06/03/24	15:00 - 17:00
+	FNC vs SKT			06/03/24	17:00 - 19:00
+	FPX vs G2			06/03/24	19:00 - 21:00
+	DWG vs EDG			07/03/24	13:00 - 15:00
+	SKT vs RNG			07/03/24	15:00 - 17:00
+	G2 vs FPX			07/03/24	17:00 - 19:00
+	TSM vs FNC			07/03/24	19:00 - 21:00
+	FPX vs DWG			08/03/24	13:00 - 15:00
+	FNC vs G2			08/03/24	15:00 - 17:00
+	RNG vs SKT			08/03/24	17:00 - 19:00
+	EDG vs TSM			08/03/24	19:00 - 21:00
+	TSM vs EDG			09/03/24	13:00 - 15:00
+	G2 vs FNC			09/03/24	15:00 - 17:00
+	SKT vs FPX			09/03/24	17:00 - 19:00
+	RNG vs G2			10/03/24	13:00 - 15:00
+	DWG vs SKT			10/03/24	15:00 - 17:00
+	FPX vs TSM			10/03/24	19:00 - 21:00
+	EDG vs FNC			11/03/24	13:00 - 15:00
+	TSM vs RNG			11/03/24	15:00 - 17:00
+	G2 vs DWG			11/03/24	17:00 - 19:00
+	SKT vs G2			12/03/24	13:00 - 15:00
+	FNC vs FPX			12/03/24	15:00 - 17:00
+	RNG vs EDG			12/03/24	17:00 - 19:00
+	DWG vs TSM			12/03/24	19:00 - 21:00
+	FPX vs FNC			13/03/24	13:00 - 15:00
+	TSM vs DWG			13/03/24	15:00 - 17:00
+	G2 vs SKT			13/03/24	17:00 - 19:00
+	EDG vs RNG			13/03/24	19:00 - 21:00
+	SKT vs TSM			14/03/24	13:00 - 15:00
+	DWG vs FPX			14/03/24	19:00 - 21:00
+	FNC vs EDG			15/03/24	15:00 - 17:00
+	TSM vs G2			15/03/24	17:00 - 19:00
+	FPX vs RNG			15/03/24	19:00 - 21:00
+	DWG vs FNC			16/03/24	13:00 - 15:00
+	RNG vs FPX			16/03/24	17:00 - 19:00
+	EDG vs SKT			16/03/24	19:00 - 21:00
+	SKT vs EDG			17/03/24	13:00 - 15:00
+	G2 vs RNG			17/03/24	17:00 - 19:00
+	FNC vs DWG			17/03/24	19:00 - 21:00
+	RNG vs FNC			18/03/24	13:00 - 15:00
+	TSM vs SKT			18/03/24	15:00 - 17:00
+	EDG vs FPX			18/03/24	17:00 - 19:00
+	DWG vs G2			18/03/24	19:00 - 21:00
+	FPX vs EDG			19/03/24	13:00 - 15:00
+	SKT vs DWG			19/03/24	15:00 - 17:00
+	G2 vs TSM			19/03/24	17:00 - 19:00
+	FNC vs RNG			19/03/24	19:00 - 21:00
+
+Se generó el archivo 8teams.ics con el calendario del torneo 'Campeonato Mundial de League of Legends'
+
+real	0m2.134s
+user	0m2.059s
+sys	0m0.625s

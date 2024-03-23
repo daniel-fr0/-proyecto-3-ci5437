@@ -1,0 +1,53 @@
+Generando archivo CNF...
+Se generó el archivo 6teams.cnf
+6 participantes
+12 días
+3 horas
+Resolviendo SAT de 1080 variables y 177720 cláusulas...
+SATISFACIBLE
+Generando calendario...
+
+################################################################################
+
+	Campeonato Mundial de League of Legends
+
+################################################################################
+
+	Juego(local vs visitante)	Fecha		Hora
+
+	FPX vs FNC			04/03/24	13:00 - 15:00
+	SKT vs RNG			04/03/24	15:00 - 17:00
+	TSM vs G2			04/03/24	17:00 - 19:00
+	FNC vs FPX			05/03/24	13:00 - 15:00
+	G2 vs SKT			05/03/24	15:00 - 17:00
+	RNG vs TSM			05/03/24	17:00 - 19:00
+	FPX vs RNG			06/03/24	13:00 - 15:00
+	SKT vs FNC			06/03/24	15:00 - 17:00
+	RNG vs FPX			07/03/24	13:00 - 15:00
+	G2 vs TSM			07/03/24	15:00 - 17:00
+	FPX vs G2			08/03/24	13:00 - 15:00
+	FNC vs RNG			08/03/24	15:00 - 17:00
+	TSM vs SKT			08/03/24	17:00 - 19:00
+	RNG vs FNC			09/03/24	13:00 - 15:00
+	G2 vs FPX			09/03/24	15:00 - 17:00
+	SKT vs TSM			09/03/24	17:00 - 19:00
+	FPX vs SKT			10/03/24	13:00 - 15:00
+	FNC vs G2			10/03/24	15:00 - 17:00
+	SKT vs FPX			11/03/24	13:00 - 15:00
+	G2 vs RNG			11/03/24	15:00 - 17:00
+	TSM vs FNC			11/03/24	17:00 - 19:00
+	FPX vs TSM			12/03/24	13:00 - 15:00
+	FNC vs SKT			12/03/24	15:00 - 17:00
+	RNG vs G2			12/03/24	17:00 - 19:00
+	G2 vs FNC			13/03/24	13:00 - 15:00
+	TSM vs RNG			13/03/24	15:00 - 17:00
+	FNC vs TSM			14/03/24	13:00 - 15:00
+	SKT vs G2			14/03/24	17:00 - 19:00
+	TSM vs FPX			15/03/24	13:00 - 15:00
+	RNG vs SKT			15/03/24	17:00 - 19:00
+
+Se generó el archivo 6teams.ics con el calendario del torneo 'Campeonato Mundial de League of Legends'
+
+real	0m0.305s
+user	0m0.439s
+sys	0m0.419s

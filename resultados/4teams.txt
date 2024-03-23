@@ -1,0 +1,35 @@
+Generando archivo CNF...
+Se generó el archivo 4teams.cnf
+4 participantes
+7 días
+2 horas
+Resolviendo SAT de 168 variables y 10152 cláusulas...
+SATISFACIBLE
+Generando calendario...
+
+################################################################################
+
+	Campeonato Mundial de League of Legends
+
+################################################################################
+
+	Juego(local vs visitante)	Fecha		Hora
+
+	RNG vs G2			04/03/24	13:00 - 15:00
+	TSM vs SKT			04/03/24	15:00 - 17:00
+	G2 vs TSM			05/03/24	13:00 - 15:00
+	SKT vs RNG			05/03/24	15:00 - 17:00
+	TSM vs G2			06/03/24	13:00 - 15:00
+	G2 vs SKT			07/03/24	13:00 - 15:00
+	RNG vs TSM			07/03/24	15:00 - 17:00
+	SKT vs G2			08/03/24	13:00 - 15:00
+	TSM vs RNG			08/03/24	15:00 - 17:00
+	RNG vs SKT			09/03/24	15:00 - 17:00
+	SKT vs TSM			10/03/24	13:00 - 15:00
+	G2 vs RNG			10/03/24	15:00 - 17:00
+
+Se generó el archivo 4teams.ics con el calendario del torneo 'Campeonato Mundial de League of Legends'
+
+real	0m0.136s
+user	0m0.205s
+sys	0m0.484s

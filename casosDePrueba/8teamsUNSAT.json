@@ -1,7 +1,7 @@
 {
 	"tournament_name": "Campeonato Mundial de League of Legends",
 	"start_date": "2024-03-04",
-	"end_date": "2024-03-19",
+	"end_date": "2024-03-15",
 	"start_time": "12:30:00",
 	"end_time": "21:00:00",
 	"participants": ["TSM", "SKT", "G2", "RNG", "FNC", "DWG", "EDG", "FPX"]
