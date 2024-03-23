@@ -1,0 +1,9 @@
+16 participantes
+90 días
+4 horas
+Generando archivo CNF...
+Killed
+
+real    1m48.610s
+user    0m28.781s
+sys     0m13.557s
