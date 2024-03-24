@@ -25,7 +25,9 @@ El cliente implementado en `main.py` recibe un JSON con el formato de entrada, e
 
 Se incluyen archivos de prueba en el directorio `casosDePrueba` con los cuales se puede probar el programa.
 
+## Conclusiones
 Los resultados de los casos de prueba se pueden encontrar en `resultados`.
+De los resultados obtenidos podemos ver en practica que el uso de heuristicas y algoritmos de busqueda de conflictos como los estudiados en clase e implementados en Glucose, permiten resolver problemas de satisfaccion de restricciones de manera eficiente y rapida. Esto porque en los casos donde se obtiene una solucion son mucho mas rapidos que los casos donde no se obtiene una solucion, lo que indica que el algoritmo es capaz de mejorar la busqueda usando las heuristicas y busqueda de conflictos para encontrar la solucion con el menor numero de backtracks posibles.
 
 ## Modo de uso
 Para instalar las dependencias, se debe correr el siguiente comando:
